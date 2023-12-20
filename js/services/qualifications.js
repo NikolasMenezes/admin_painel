@@ -12,7 +12,7 @@ class Qualification extends Request {
       mode: this.mode,
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
   async post(body) {
     const endpoint = "api/insert_qualification.php";
@@ -23,7 +23,7 @@ class Qualification extends Request {
       body: JSON.stringify(body),
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
   async put(body) {
     const endpoint = "api/update_qualification.php";
@@ -34,7 +34,7 @@ class Qualification extends Request {
       body: JSON.stringify(body),
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
   async delete(body) {
     const endpoint = "api/delete_qualification.php";
@@ -45,7 +45,7 @@ class Qualification extends Request {
       body: JSON.stringify(body),
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
 }
 

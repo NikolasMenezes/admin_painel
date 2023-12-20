@@ -14,7 +14,7 @@ class Activity extends Request {
       body: JSON.stringify(body),
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
   async put(body) {
     const endpoint = "api/update_activity.php";
@@ -25,7 +25,7 @@ class Activity extends Request {
       body: JSON.stringify(body),
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
   async delete(body) {
     const endpoint = "api/delete_activity.php";
@@ -36,7 +36,7 @@ class Activity extends Request {
       body: JSON.stringify(body),
     };
 
-    this.execute(endpoint, options);
+    return await this.execute(endpoint, options);
   }
 }
 
