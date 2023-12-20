@@ -5,7 +5,7 @@ export default class Request {
     this.header = {
       "Content-Type": "application/json",
     };
-    this.mode = "same-origin";
+    this.mode = "cors";
   }
 
   async execute(endpoint, options) {

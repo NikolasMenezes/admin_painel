@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,54 @@
     <link rel="stylesheet" href="styles.css">
     <script src="./js/index.js" type="module" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Painel Admin</h1>
     </header>
-    
+
     <form id="form-portfolio">
-      <label for="endpoint">Escolha o Endpoint:</label>
-      <select id="endpoint" required>
-          <option value="pinto" selected disabled>Selecione ...</option>
-          <option value="formacoes">Formações</option>
-          <option value="experiencias">Experiências</option>
-      </select>
+        <label for="endpointSelect">Escolha o Endpoint:</label>
+        <select id="endpointSelect" required>
+            <option value="" selected disabled>Selecione ...</option>
+            <option value="activity">Atividades</option>
+            <option value="certifications">Certificações</option>
+            <option value="expertises">Expertises</option>
+            <option value="professionalExperience">Experiência profissional</option>
+            <option value="academicEducation">Formações Academicas</option>
+            <option value="languages">Idiomas</option>
+            <option value="personalInformation">Informações pessoais</option>
+            <option value="portfolio">Portfolio</option>
+            <option value="qualifications">Qualificações</option>
+        </select>
 
-      <label for="operacao">Escolha a Operação:</label>
-      <select id="operacao" required>
-          <option value="pinto" selected disabled>Selecione ...</option>
-          <option value="post">POST</option>
-          <option value="put">PUT</option>
-          <option value="delete">DELETE</option>
-      </select>
+        <label for="methodSelect">Escolha a Operação:</label>
+        <select id="methodSelect" required>
+            <option value="" selected disabled>Selecione ...</option>
+            <option value="post">POST</option>
+            <option value="put">PUT</option>
+            <option value="delete">DELETE</option>
+        </select>
 
+        <div id="jsonContainer">
+            <p>Operação atual: <span id="operationSpan">POST</span></p>
 
-      <button type="button">Executar Operação</button>
-  </form>
+            <p>Insira um JSON no formato:</p>
+
+            <pre id="exampleField">
+
+            </pre>
+
+            <textarea id="jsonInput" rows="5" cols="40" placeholder="Insira seu JSON aqui..."></textarea>
+
+            <br>
+            <div class="formatter-container">
+                <button type="button" class="formatter" id="formatJson">Formatar JSON</button>
+            </div>
+        </div>
+
+        <button type="button">Executar Operação</button>
+    </form>
 </body>
+
 </html>
