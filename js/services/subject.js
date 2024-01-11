@@ -8,7 +8,7 @@ class Subject extends Request {
   async post(body) {
     const endpoint = "api/insert_subject.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -19,7 +19,7 @@ class Subject extends Request {
   async put(body) {
     const endpoint = "api/update_subject.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -30,7 +30,7 @@ class Subject extends Request {
   async delete(body) {
     const endpoint = "api/delete_subject.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),

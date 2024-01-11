@@ -17,7 +17,7 @@ class AcademicEducation extends Request {
   async post(body) {
     const endpoint = "api/insert_academic_education.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -28,7 +28,7 @@ class AcademicEducation extends Request {
   async put(body) {
     const endpoint = "api/update_academic_education.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -39,7 +39,7 @@ class AcademicEducation extends Request {
   async delete(body) {
     const endpoint = "api/delete_academic_education.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),

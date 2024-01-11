@@ -17,29 +17,32 @@ class Languagues extends Request {
   async post(body) {
     const endpoint = "api/insert_language.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
     };
+
+    console.log(this.header)
 
     return await this.execute(endpoint, options);
   }
   async put(body) {
     const endpoint = "api/update_language.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
     };
+    
 
     return await this.execute(endpoint, options);
   }
   async delete(body) {
     const endpoint = "api/delete_language.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),

@@ -17,7 +17,7 @@ class Qualification extends Request {
   async post(body) {
     const endpoint = "api/insert_qualification.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -28,7 +28,7 @@ class Qualification extends Request {
   async put(body) {
     const endpoint = "api/update_qualification.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -39,7 +39,7 @@ class Qualification extends Request {
   async delete(body) {
     const endpoint = "api/delete_qualification.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),

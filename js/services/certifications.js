@@ -17,7 +17,7 @@ class Certifications extends Request {
   async post(body) {
     const endpoint = "api/insert_certification.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -28,7 +28,7 @@ class Certifications extends Request {
   async put(body) {
     const endpoint = "api/update_certification.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -39,7 +39,7 @@ class Certifications extends Request {
   async delete(body) {
     const endpoint = "api/delete_certification.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),

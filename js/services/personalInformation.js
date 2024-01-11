@@ -17,7 +17,7 @@ class PersonalInformation extends Request {
   async put(body) {
     const endpoint = "api/update_personal_informations.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),

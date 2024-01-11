@@ -17,7 +17,7 @@ class Expertises extends Request {
   async post(body) {
     const endpoint = "api/insert_expertise_description.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -28,7 +28,7 @@ class Expertises extends Request {
   async put(body) {
     const endpoint = "api/update_expertise.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
@@ -39,7 +39,7 @@ class Expertises extends Request {
   async delete(body) {
     const endpoint = "api/delete_expertise.php";
     const options = {
-      methods: "POST",
+      method: "POST",
       header: this.header,
       mode: this.mode,
       body: JSON.stringify(body),
