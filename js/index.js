@@ -76,7 +76,6 @@ const optionActions = {
     if (!method) {
       const expertises = await expertisesService.get();
 
-      console.log(expertises);
       showExample(jsonContainer);
       setExample(exampleField, expertises[0]);
     }
@@ -231,8 +230,6 @@ function executeOperation() {
     endpointSelect.options[endpointSelect.selectedIndex].value;
 
   const operationToExucute = optionActions[selecedEndpoint];
-
-  console.log(operationToExucute);
 
   operationToExucute(selectedMethod);
 }
